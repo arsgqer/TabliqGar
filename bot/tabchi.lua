@@ -451,7 +451,7 @@ d:incr("tallmsg")
         if not d:sismember("sgpsXXX",msg.chat_id_) then
           d:sadd("tsgpsXXX",msg.chat_id_)
           d:sadd("sgpsXXX",msg.chat_id_)
-  d:setex("eXXX"..msg.chat_id_,720,true)
+  d:setex("eXXX"..msg.chat_id_,2400,true)
 				for v,user in pairs(d:smembers("addsXXX")) do
 			tdcli_function ({
 								ID = "AddChatMember",
